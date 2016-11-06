@@ -12,5 +12,6 @@ class WelcomeController < ApplicationController
 
   		File.new("hahaha.csv", "w+") do |f|
   			f << ["row", "of", "CSV", "data"].join(", ") + "\n"
+  		end
   	end
 end
