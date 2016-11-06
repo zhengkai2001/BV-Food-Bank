@@ -1,3 +1,5 @@
+require 'csv'
+
 class WelcomeController < ApplicationController
 	def index
     	@name = params[:donor_name]
