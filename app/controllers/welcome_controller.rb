@@ -1,10 +1,11 @@
 class WelcomeController < ApplicationController
 	def index
     	@name = params[:donor_name]
-  		File.new("data.csv", "w+") do |f|
-  			@name.each do |name|
-  				f << [name].join(", ") + "\n"
-  			end
-  		end
+    	respond_to do |format|
+      		format.html
+      		format.xlsx {
+    			response.headers['Content-Disposition'] = 'attachment; filename="Donor.xlsx"'
+  			}
+    	end
   	end
 end
