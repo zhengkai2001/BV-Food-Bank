@@ -7,8 +7,6 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
-  match '/hello' => 'welcome#hello'
-  get ':controller/:action/:option'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
