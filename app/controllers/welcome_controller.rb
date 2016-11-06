@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
-	def hello
+	def index
     	@name = params[:donor_name]
     	respond_to do |format|
       		format.html
