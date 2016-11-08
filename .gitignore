@@ -19,5 +19,8 @@
 # Ignore Byebug command history file.
 .byebug_history
 
-#Ignore RubyMine configuration files.
+# Ignore RubyMine configuration files.
 /.idea
+
+# Ignore generated donation info .csv files
+/DonationInfo*.csv
