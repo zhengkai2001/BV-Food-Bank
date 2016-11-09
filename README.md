@@ -1,8 +1,7 @@
 # BV-Food-Bank
-CSCE 655 Project
-
+CSCE 606 Project
 
 ## Library used:
-jquery
-bootstrap
-bootstrap-select: https://silviomoreto.github.io/bootstrap-select/
+- jquery
+- bootstrap
+- bootstrap-select: https://silviomoreto.github.io/bootstrap-select/

@@ -20,6 +20,5 @@ class WelcomeController < ApplicationController
         csv << [params[:donation_date], params[:donation_product], params[:donation_detail_food], params[:donation_detail_money], params[:donation_total], params[:donation_total_unit], params[:donor_name], params[:donor_address], params[:donor_city], params[:donor_state], params[:donor_zip], params[:donor_email]]
       end
     end
-
   end
 end
