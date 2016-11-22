@@ -6,7 +6,7 @@ class WelcomeController < ApplicationController
 	def index
         @email = params[:donor_email]
         
-        #SMailer.sendemail(@email).deliver_now
+        SMailer.sendemail(@email).deliver_now
 
     	@name = params[:donor_name]
     	if params[:dnation_detail_money] == "None"
@@ -32,7 +32,7 @@ data = JSON.parse('{
           "email": "zjh08177@tamu.edu"
         }
       ],
-      "subject": "Hello World from the SendGrid Ruby Library!"
+      "subject": "Thank you for donation!"
     }
   ],
   "from": {
@@ -41,7 +41,7 @@ data = JSON.parse('{
   "content": [
     {
       "type": "text/plain",
-      "value": "Hello, Email!"
+      "value": "Thanks"
     }
   ]
 }')
