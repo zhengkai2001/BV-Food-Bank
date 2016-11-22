@@ -7,7 +7,6 @@ Rails.application.configure do
   config.cache_classes = false
 
 config.action_mailer.delivery_method = :smtp
-config.action_mailer.default_url_options = { :host => 'fast-chamber-54336.herokuapp.com' }
 config.action_mailer.smtp_settings = {
   :user_name => 'app58916837@heroku.com',
   :password => 'rruueqkt4751',

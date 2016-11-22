@@ -6,7 +6,7 @@ class WelcomeController < ApplicationController
 	def index
         @email = params[:donor_email]
         
-        SMailer.sendemail(@email).deliver_now
+        #SMailer.sendemail(@email).deliver_now
 
     	@name = params[:donor_name]
     	if params[:dnation_detail_money] == "None"
@@ -45,7 +45,7 @@ data = JSON.parse('{
     }
   ]
 }')
-sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])
+sg = SendGrid::API.new(api_key: "eric")
 response = sg.client.mail._("send").post(request_body: data)
 puts response.status_code
 puts response.body
