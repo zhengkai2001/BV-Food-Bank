@@ -5,7 +5,7 @@ class WelcomeController < ApplicationController
         @email = params[:donor_email]
         @body = "HAHAHAHAHA"
         
-        SMailer.send_email(@email, @body).deliver_now
+        #SMailer.send_email(@email, @body).deliver_now
 
     	@name = params[:donor_name]
     	if params[:dnation_detail_money] == "None"
