@@ -3,7 +3,6 @@ require 'csv'
 class WelcomeController < ApplicationController
 	def index
         @email = params[:donor_email]
-        @body = "HAHAHAHAHA"
         
         SMailer.sendemail(@email).deliver_now
 

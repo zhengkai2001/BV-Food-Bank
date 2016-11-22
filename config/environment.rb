@@ -1,9 +1,11 @@
 # Load the Rails application.
 require File.expand_path('../application', __FILE__)
+ActionMailer::Base.default_url_options = { :host => 'fast-chamber-54336.herokuapp.com' }
+
 ActionMailer::Base.smtp_settings = {
   :user_name => 'app58916837@heroku.com',
   :password => 'zjh19920817',
-  :domain => 'https://fast-chamber-54336.herokuapp.com/',
+  :domain => 'heroku.com',
   :address => 'smtp.sendgrid.net',
   :port => 25,
   :authentication => :plain,
