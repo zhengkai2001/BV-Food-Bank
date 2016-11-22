@@ -4,7 +4,7 @@ ActionMailer::Base.default_url_options = { :host => 'fast-chamber-54336.herokuap
 
 ActionMailer::Base.smtp_settings = {
   :user_name => 'app58916837@heroku.com',
-  :password => 'zjh19920817',
+  :password => 'rruueqkt4751',
   :domain => 'heroku.com',
   :address => 'smtp.sendgrid.net',
   :port => 25,

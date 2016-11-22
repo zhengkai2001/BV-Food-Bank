@@ -10,7 +10,7 @@ config.action_mailer.delivery_method = :smtp
 config.action_mailer.default_url_options = { :host => 'fast-chamber-54336.herokuapp.com' }
 config.action_mailer.smtp_settings = {
   :user_name => 'app58916837@heroku.com',
-  :password => 'zjh19920817',
+  :password => 'rruueqkt4751',
   :domain => 'heroku.com',
   :address => 'smtp.sendgrid.net',
   :port => 25,
