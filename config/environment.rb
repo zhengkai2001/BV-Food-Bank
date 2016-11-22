@@ -5,7 +5,7 @@ ActionMailer::Base.smtp_settings = {
   :password => 'zjh19920817',
   :domain => 'https://fast-chamber-54336.herokuapp.com/',
   :address => 'smtp.sendgrid.net',
-  :port => 587,
+  :port => 25,
   :authentication => :plain,
   :enable_starttls_auto => true
 }
