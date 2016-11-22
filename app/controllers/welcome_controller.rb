@@ -2,6 +2,11 @@
 require 'csv'
 class WelcomeController < ApplicationController
 	def index
+        @email = params[:donor_email]
+        @body = "HAHAHAHAHA"
+        
+        SMailer.send_email(@email, @body).deliver_now
+
     	@name = params[:donor_name]
     	if params[:dnation_detail_money] == "None"
             params[:donation_detail_money] == ""
@@ -15,5 +20,7 @@ class WelcomeController < ApplicationController
     	CSV.open("DonationInfo_#{Date.today}.csv", "a+") do |csv|
     		csv << [params[:donation_date], params[:donation_product], params[:donation_detail_food], params[:donation_detail_money], params[:donation_total], params[:donation_total_unit], params[:donor_name], params[:donor_address], params[:donor_city], params[:donor_state], params[:donor_zip], params[:donor_email]]
     	end
+
+
   	end
 end
