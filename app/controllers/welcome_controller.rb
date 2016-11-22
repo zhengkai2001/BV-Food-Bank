@@ -6,7 +6,7 @@ class WelcomeController < ApplicationController
 	def index
         @email = params[:donor_email]
         
-        SMailer.sendemail(@email).deliver_now
+        #Mailer.sendemail(@email).deliver_now
 
     	@name = params[:donor_name]
     	if params[:dnation_detail_money] == "None"
