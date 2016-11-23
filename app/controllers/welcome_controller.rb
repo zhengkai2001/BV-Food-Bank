@@ -1,4 +1,6 @@
 require 'csv'
+require 'sendgrid-ruby'
+include SendGrid
 class WelcomeController < ApplicationController
   def index
     if request.post? && !params[:donation_date].to_s.empty?
@@ -6,6 +8,34 @@ class WelcomeController < ApplicationController
       if params[:donation_detail_money] == 'None'
         params[:donation_detail_money] == ''
       end
+
+      @email = params[:donor_email]
+      data = JSON.parse('{
+          "personalizations": [
+              {
+                  "to": [
+                      {
+                          "email": "zjh08177@tamu.edu"
+                      }
+                  ],
+                  "subject": "Thank you for donation!"
+              }
+          ],
+          "from": {
+              "email": "zjh08177@gmail.com"
+          },
+          "content": [
+              {
+                  "type": "text/plain",
+                  "value": "Thanks"
+              }
+          ]
+      }')
+      sg = SendGrid::API.new(api_key: "eric")
+      response = sg.client.mail._("send").post(request_body: data)
+      puts response.status_code
+      puts response.body
+      puts response.headers
 
       file_name = "DonationInfo_#{Date.today}.csv"
 

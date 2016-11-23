@@ -6,6 +6,16 @@ Rails.application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
 
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.smtp_settings = {
+  :user_name => 'app58916837@heroku.com',
+  :password => 'rruueqkt4751',
+  :domain => 'heroku.com',
+  :address => 'smtp.sendgrid.net',
+  :port => 25,
+  :authentication => :plain,
+  :enable_starttls_auto => true
+}
   # Do not eager load code on boot.
   config.eager_load = false
 

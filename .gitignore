@@ -24,3 +24,7 @@
 
 # Ignore generated donation info .csv files
 /DonationInfo*.csv
+
+# Microsoft Word temp file
+~*.doc
+~*.docx
